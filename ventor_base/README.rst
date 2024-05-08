@@ -6,6 +6,13 @@ Base module that allow relation between Ventor modules
 Changelog
 ---------
 
+15.0.1.10.0 (2024-05-08)
+***********************
+
+* Added warning message when activating the Outgoing Routing checkbox and Picking and Reservation Strategy module not exist in server
+* Removed the dependency between Force pack and Validate uncompleted orders settings
+* Added the setting "Show scrap button" to the Quick Info menu
+
 15.0.1.9.0 (2023-11-04)
 ***********************
 
