@@ -6,6 +6,11 @@ Base module that allow relation between Ventor modules
 Changelog
 ---------
 
+15.0.1.11.0 (2024-xx-xx)
+***********************
+
+* Added the setting "Apply all lines automatically" to the RFID menu
+
 15.0.1.10.0 (2024-05-08)
 ***********************
 
