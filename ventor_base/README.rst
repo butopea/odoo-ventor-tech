@@ -9,7 +9,7 @@ Changelog
 15.0.1.11.0 (2024-xx-xx)
 ***********************
 
-* Added the setting "Apply all lines automatically" to the RFID menu
+* Added the settings "Apply all lines automatically", "Hide product's quantity", "Hide Apply button" to the RFID Inventory Adjustments menu
 
 15.0.1.10.0 (2024-05-08)
 ***********************
