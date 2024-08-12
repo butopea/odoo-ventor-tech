@@ -110,6 +110,8 @@ class VentorOptionSetting(models.Model):
 
         settings = {}
         for action_type in action_types:
+            if action_type == 'internal_transfers':
+                a = 10
             settings[action_type] = {
                 set.technical_name: self.get_normalized_value(set.value.setting_value)
                 for set in ventor_option_settings.filtered(lambda r: r.action_type == action_type)
@@ -244,6 +246,8 @@ class VentorOptionSetting(models.Model):
             'Always Split the Line': 'always_split_line',
             'Always Move Less Items': 'always_move_less_items',
             'Ask Me Every Time': 'ask_me_every_time',
+            'Save transfer': 'save_transfer',
+            'Cancel transfer': 'cancel_transfer',
         }
         return normalized_settings.get(setting_value)
 
