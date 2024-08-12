@@ -6,6 +6,11 @@ Base module that allow relation between Ventor modules
 Changelog
 ---------
 
+15.0.1.11.0 (2024-xx-xx)
+***********************
+
+* Added the setting "Open details screen first" to the Warehouse Operations menu
+
 15.0.1.10.0 (2024-05-08)
 ***********************
 
