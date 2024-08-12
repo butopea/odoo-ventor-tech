@@ -110,8 +110,6 @@ class VentorOptionSetting(models.Model):
 
         settings = {}
         for action_type in action_types:
-            if action_type == 'internal_transfers':
-                a = 10
             settings[action_type] = {
                 set.technical_name: self.get_normalized_value(set.value.setting_value)
                 for set in ventor_option_settings.filtered(lambda r: r.action_type == action_type)
