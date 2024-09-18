@@ -10,6 +10,9 @@ Change Log
 
 |
 
+* 15.0.1.12.0 (2024-xx-xx)
+    - Added the settings "Fast printing" to the Quick Info menu
+
 * 15.0.1.11.0 (2024-08-21)
     - Added the settings "Apply all lines automatically", "Hide product's quantity", "Hide Apply button" to the RFID Inventory Adjustments menu
     - Added the setting "Hide product's quantity" to the Quick Info menu

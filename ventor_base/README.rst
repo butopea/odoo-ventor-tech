@@ -6,6 +6,11 @@ Base module that allow relation between Ventor modules
 Changelog
 ---------
 
+15.0.1.12.0 (2024-xx-xx)
+***********************
+
+* Added the settings "Fast printing" to the Quick Info menu
+
 15.0.1.11.0 (2024-08-21)
 ***********************
 
