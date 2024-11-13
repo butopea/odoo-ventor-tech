@@ -42,6 +42,8 @@
                     <field name="check_shipping_information" attrs="{'readonly': [('code','!=','outgoing')]}"/>
                     <field name="hide_qty_to_receive" attrs="{'readonly': [('code','!=','incoming')]}"/>
                     <field name="open_details_screen_first"/>
+                    <field name="is_quality_control_module_installed" invisible='1'/>
+                    <field name="quality_check_per_product_line" attrs="{'readonly': [('is_quality_control_module_installed','=',False)]}"/>
                 </tree>
             </field>
         </record>
@@ -90,6 +92,8 @@
                             <field name="check_shipping_information" attrs="{'invisible': [('code','!=','outgoing')]}"/>
                             <field name="hide_qty_to_receive" attrs="{'invisible': [('code','!=','incoming')]}"/>
                             <field name="open_details_screen_first"/>
+                            <field name="is_quality_control_module_installed" invisible='1'/>
+                            <field name="quality_check_per_product_line" attrs="{'readonly': [('is_quality_control_module_installed','=',False)]}"/>
                         </group>
                     </group>
                 </xpath>

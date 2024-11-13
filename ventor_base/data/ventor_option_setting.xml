@@ -275,6 +275,16 @@
             <field name="description">Showing the Put in pack button in the toolbar instead of keeping it in the hidden menu</field>
         </record>
 
+        <record id="quality_check_per_product_line_batch" model="ventor.option.setting">
+            <field name="name">Quality check per product line</field>
+            <field name="technical_name">quality_check_per_product_line</field>
+            <field name="value" ref="ventor_base.bool_false"/>
+            <field name="settings_dependency" eval="[(6, 0, [ref('ventor_base.bool_false'), ref('ventor_base.bool_true')])]"/>
+            <field name="value_type">bool</field>
+            <field name="action_type">batch_picking</field>
+            <field name="description">If the setting is active the Quality check wizard will be shown automatically while processing each product line. Disable if you want to do the Quality check manually after all product lines are confirmed</field>
+        </record>
+
         <!--Wave picking-->
         <record id="confirm_source_location_wave_picking" model="ventor.option.setting">
             <field name="name">Confirm source location</field>
@@ -486,6 +496,16 @@
             <field name="value_type">bool</field>
             <field name="action_type">wave_picking</field>
             <field name="description">Showing the Put in pack button in the toolbar instead of keeping it in the hidden menu</field>
+        </record>
+
+        <record id="quality_check_per_product_line_wave_picking" model="ventor.option.setting">
+            <field name="name">Quality check per product line</field>
+            <field name="technical_name">quality_check_per_product_line</field>
+            <field name="value" ref="ventor_base.bool_false"/>
+            <field name="settings_dependency" eval="[(6, 0, [ref('ventor_base.bool_false'), ref('ventor_base.bool_true')])]"/>
+            <field name="value_type">bool</field>
+            <field name="action_type">wave_picking</field>
+            <field name="description">If the setting is active the Quality check wizard will be shown automatically while processing each product line. Disable if you want to do the Quality check manually after all product lines are confirmed</field>
         </record>
 
         <!-- Cluster picking -->
@@ -739,6 +759,16 @@
             <field name="value_type">bool</field>
             <field name="action_type">cluster_picking</field>
             <field name="description">Apply reusable packages as cluster boxes (same as Odoo does) instead of locations (default in Ventor)</field>
+        </record>
+
+        <record id="quality_check_per_product_line_cluster_picking" model="ventor.option.setting">
+            <field name="name">Quality check per product line</field>
+            <field name="technical_name">quality_check_per_product_line</field>
+            <field name="value" ref="ventor_base.bool_false"/>
+            <field name="settings_dependency" eval="[(6, 0, [ref('ventor_base.bool_false'), ref('ventor_base.bool_true')])]"/>
+            <field name="value_type">bool</field>
+            <field name="action_type">cluster_picking</field>
+            <field name="description">If the setting is active the Quality check wizard will be shown automatically while processing each product line. Disable if you want to do the Quality check manually after all product lines are confirmed</field>
         </record>
 
         <!-- Internal transfers -->

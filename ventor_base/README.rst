@@ -6,10 +6,11 @@ Base module that allow relation between Ventor modules
 Changelog
 ---------
 
-15.0.1.12.0 (2024-xx-xx)
+15.0.2.0.0 (2024-xx-xx)
 ***********************
 
 * Added the settings "Fast printing" to the Quick Info menu
+* Added the "Quality check per product line" setting to Warehouse Opration, Batch Picking, Cluster Picking, Wave Picking menus
 
 15.0.1.11.0 (2024-08-21)
 ***********************
