@@ -115,6 +115,10 @@ class StockPickingType(models.Model):
         compute="_compute_is_stock_production_lot_enabled"
     )
 
+    is_quality_control_module_installed = fields.Boolean(
+        compute="_compute_is_quality_control_module_installed"
+    )
+
     manage_packages = fields.Boolean(
         string="Show packages fields",
         default=lambda self: self.env.ref("stock.group_tracking_lot")
@@ -139,6 +143,13 @@ class StockPickingType(models.Model):
         default=False,
         help="Clicking on transfer card will bring details screen "
              "instead of opening a whole stock picking"
+    )
+
+    quality_check_per_product_line = fields.Boolean(
+        string="Quality check per product line",
+        help="If the setting is active the Quality check wizard will be shown automatically while "
+             "processing each product line. Disable if you want to do the Quality check manually "
+             "after all product lines are confirmed"
     )
 
     scan_destination_location_once = fields.Boolean(
@@ -205,6 +216,11 @@ class StockPickingType(models.Model):
         group_production_lot = self.env.ref("stock.group_production_lot")
         for item in self:
             item.is_stock_production_lot_enabled = group_production_lot in internal_user_groups
+
+    def _compute_is_quality_control_module_installed(self):
+        is_qc_installed = self.is_module_installed('quality_control')
+        for item in self:
+            item.is_quality_control_module_installed = is_qc_installed
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -303,5 +319,6 @@ class StockPickingType(models.Model):
                 "check_shipping_information": self.check_shipping_information,
                 "hide_qty_to_receive": self.hide_qty_to_receive,
                 "open_details_screen_first": self.open_details_screen_first,
+                "quality_check_per_product_line": self.quality_check_per_product_line,
             }
         }
