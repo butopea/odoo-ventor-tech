@@ -6,6 +6,11 @@ Base module that allow relation between Ventor modules
 Changelog
 ---------
 
+16.0.2.0.0 (2024-xx-xx)
+***********************
+
+* Added the setting "Move reserved quantities" to the Warehouse Operations menu
+
 16.0.1.6.0 (2024-08-21)
 ***********************
 

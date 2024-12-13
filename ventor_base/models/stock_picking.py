@@ -134,6 +134,11 @@ class StockPickingType(models.Model):
              "Working only with 'Consignment' setting on Odoo side"
     )
 
+    move_reserved_quantities = fields.Boolean(
+        string="Move reserved quantities",
+        help="Allows moving items reserved by other operations",
+    )
+
     open_details_screen_first = fields.Boolean(
         string="Open details screen first",
         default=False,
@@ -296,6 +301,7 @@ class StockPickingType(models.Model):
                 "show_put_in_pack_button": self.show_put_in_pack_button,
                 "manage_packages": self.manage_packages,
                 "manage_product_owner": self.manage_product_owner,
+                "move_reserved_quantities": self.move_reserved_quantities,
                 "behavior_on_backorder_creation": self.behavior_on_backorder_creation,
                 "behavior_on_split_operation": self.behavior_on_split_operation,
                 "scan_destination_package": self.scan_destination_package,

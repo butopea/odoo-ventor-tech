@@ -33,6 +33,7 @@
                     <field name="is_stock_production_lot_enabled" invisible='1'/>
                     <field name="apply_default_lots" attrs="{'readonly': [('is_stock_production_lot_enabled','=',False)]}"/>
                     <field name="transfer_more_items"/>
+                    <field name="move_reserved_quantities"/>
                     <field name="autocomplete_the_item_quantity_field"/>
                     <field name="behavior_on_backorder_creation"/>
                     <field name="behavior_on_split_operation" required="1"/>
@@ -82,6 +83,7 @@
                             <field name="is_stock_production_lot_enabled" invisible='1'/>
                             <field name="apply_default_lots" attrs="{'invisible': [('is_stock_production_lot_enabled','=',False)]}"/>
                             <field name="transfer_more_items"/>
+                            <field name="move_reserved_quantities"/>
                             <field name="autocomplete_the_item_quantity_field"/>
                             <field name="behavior_on_backorder_creation"/>
                             <field name="behavior_on_split_operation" required="1"/>
