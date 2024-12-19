@@ -140,7 +140,8 @@ class StockPickingType(models.Model):
 
     move_reserved_quantities = fields.Boolean(
         string="Move reserved quantities",
-        help="Allows moving items reserved by other operations",
+        help="Allows moving items reserved by other operations. "
+             "'Move reserved quantities' is available only if 'Change source location' is enabled.",
     )
 
     open_details_screen_first = fields.Boolean(
@@ -276,6 +277,8 @@ class StockPickingType(models.Model):
                 if stock_picking_type.change_source_location:
                     if not stock_picking_type.confirm_source_location:
                         stock_picking_type.change_source_location = False
+                if not stock_picking_type.change_source_location:
+                    stock_picking_type.move_reserved_quantities = False
 
         if 'apply_quantity_automatically' in vals or 'confirm_destination_location' in vals:
             for stock_picking_type in self:
