@@ -3,7 +3,7 @@ Ventor Base
 
 |
 
-**Base module that allow relation between Ventor modules**
+**Base module that allows relation between Ventor modules**
 
 Change Log
 ##########
