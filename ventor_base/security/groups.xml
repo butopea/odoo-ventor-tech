@@ -193,7 +193,7 @@
         <field name="comment">Allow Pallet Transfer from one location to another one</field>
     </record>
 
-    <record id="merp_prohibit_reassigning_of_transfers" model="res.groups">
+    <record id="merp_menu_prohibit_reassigning_transfers" model="res.groups">
         <field name="name">Prohibit reassigning of transfers</field>
         <field name="category_id" ref="module_category_merp_access_application"/>
         <field name="users" eval="[(4, ref('base.user_root'))]"/>
