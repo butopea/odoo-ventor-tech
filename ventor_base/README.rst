@@ -6,6 +6,10 @@ Base module that allows relation between Ventor modules
 Changelog
 ---------
 
+16.0.2.0.0 (2024-xx-xx)
+***********************
+* Added the settings "Autofill item quantity" to the Internal Transfer menu
+
 16.0.1.6.0 (2024-08-21)
 ***********************
 
