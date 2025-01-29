@@ -12,6 +12,7 @@ Changelog
 * Added the settings "Fast printing" to the Quick Info menu
 * Added the "Quality check per product line" setting to Warehouse Opration, Batch Picking, Cluster Picking, Wave Picking menus
 * Added the setting "Move reserved quantities" to the Warehouse Operations menu
+* Added the settings "Autofill item quantity" to the Internal Transfer menu
 
 15.0.1.11.0 (2024-08-21)
 ***********************

@@ -878,6 +878,16 @@
             <field name="description">Choose the action on the transfer after exit the menu. You can save it or cancel without dialog screen</field>
         </record>
 
+        <record id="autofill_item_quantity_int_transfers" model="ventor.option.setting">
+            <field name="name">Autofill item quantity</field>
+            <field name="technical_name">autofill_item_quantity</field>
+            <field name="value" ref="ventor_base.bool_false"/>
+            <field name="settings_dependency" eval="[(6, 0, [ref('ventor_base.bool_false'), ref('ventor_base.bool_true')])]"/>
+            <field name="value_type">bool</field>
+            <field name="action_type">internal_transfers</field>
+            <field name="description">Automatically insert available quantity of the selected product</field>
+        </record>
+
         <!-- Putaway -->
         <record id="set_auto_validate" model="ventor.option.setting">
             <field name="name">Move all items automatically</field>
