@@ -8,7 +8,7 @@ Picking and Reservation Strategy
 ***********************
 
 * Fixed an issue printing picking operations failed when the transfer included entire packages
-* Optimizing data sterilization
+* Optimizing data serialization
 
 16.0.1.1.0 (2023-11-04)
 ***********************
