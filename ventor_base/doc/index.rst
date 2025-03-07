@@ -15,7 +15,7 @@ Change Log
     - Added the "Quality check per product line" setting to Warehouse Opration, Batch Picking, Cluster Picking, Wave Picking menus
     - Added the setting "Move reserved quantities" to the Warehouse Operations menu
     - Added the settings "Autofill item quantity" to the Internal Transfer menu
-    - Added "Prohibition of reassigning" transfers group to user settings
+    - Added "Prohibit reassigning of transfers" group to user settings
 
 * 15.0.1.11.0 (2024-08-21)
     - Added the settings "Apply all lines automatically", "Hide product's quantity", "Hide Apply button" to the RFID Inventory Adjustments menu
