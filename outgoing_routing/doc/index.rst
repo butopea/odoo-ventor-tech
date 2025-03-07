@@ -40,7 +40,7 @@ Change Log
 
 |
 
-* 1.0.4 (2025-xx-xx)
+* 1.0.4 (2025-03-07)
     - Fixed an issue printing picking operations failed when the transfer included entire packages
     - Optimizing data serialization
 
