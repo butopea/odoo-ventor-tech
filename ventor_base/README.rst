@@ -6,6 +6,10 @@ Base module that allows relation between Ventor modules
 Changelog
 ---------
 
+16.0.2.2.0 (2025-xx-xx)
+***********************
+* Added the ability to grant access rights to users for connecting Ventor PRO/Ventor Lifetime to Odoo
+
 16.0.2.1.0 (2025-03-31)
 ***********************
 
