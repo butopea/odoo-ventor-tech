@@ -25,6 +25,7 @@ class VentorOptionSetting(models.Model):
             ('create_so', 'Create SO'),
             ('create_po', 'Create PO'),
             ('rfid', 'RFID'),
+            ('order_recheck', 'Order Recheck'),
         ], required=True
     )
     description = fields.Text()
@@ -113,6 +114,7 @@ class VentorOptionSetting(models.Model):
             'create_so',
             'create_po',
             'rfid',
+            'order_recheck',
         ]
         ventor_option_settings = self.env['ventor.option.setting'].search([])
 
