@@ -1205,5 +1205,16 @@
             <field name="action_type">rfid</field>
             <field name="description">Products quantity will be saved but not applied</field>
         </record>
+
+        <!-- Order Recheck -->
+        <record id="order_recheck" model="ventor.option.setting">
+            <field name="name">Blinde recheck</field>
+            <field name="technical_name">blind_recheck</field>
+            <field name="value" ref="ventor_base.bool_false"/>
+            <field name="settings_dependency" eval="[(6, 0, [ref('ventor_base.bool_false'), ref('ventor_base.bool_true')])]"/>
+            <field name="value_type">bool</field>
+            <field name="action_type">order_recheck</field>
+            <field name="description">Hides the expected quantity and report text</field>
+        </record>
     </data>
 </odoo>
