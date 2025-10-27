@@ -10,6 +10,7 @@ Changelog
 ***********************
 * Added the settings "Change Lots and S/N" to the Warehouse Operations menu
 * Added the settings "Group lines" to the Batch Picking menu
+* Added the settings "Scan source location once" to the Warehouse Operations, Batch Picking, Cluster Picking, Wave Picking menus
 
 15.0.2.2.0 (2025-05-20)
 ***********************
