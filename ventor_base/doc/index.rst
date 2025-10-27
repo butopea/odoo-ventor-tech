@@ -10,7 +10,7 @@ Change Log
 
 |
 
-* 16.0.2.3.0 (2025-05-20)
+* 16.0.2.3.0 (2025-10-27)
     - Added the settings "Change Lots and S/N" to the Warehouse Operations menu
     - Added the settings "Blind recheck" to the Order Recheck menu
     - Added the settings "Group lines" to the Batch Picking menu
