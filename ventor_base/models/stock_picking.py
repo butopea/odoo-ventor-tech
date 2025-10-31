@@ -104,6 +104,12 @@ class StockPickingType(models.Model):
              "The dot next to the field gets yellow color means user has to confirm it"
     )
 
+    count_picking_urgent = fields.Integer(
+        compute="_compute_count_picking_urgent",
+        string="Urgent Transfers",
+        store=True,
+    )
+
     hide_qty_to_receive = fields.Boolean(
         string="Hide QTYs to receive",
         help="Setting’s description: User will not see how many QTYs they need to receive."
@@ -155,6 +161,11 @@ class StockPickingType(models.Model):
         default=False,
         help="Clicking on transfer card will bring details screen "
              "instead of opening a whole stock picking"
+    )
+
+    picking_ids = fields.One2many(
+        comodel_name="stock.picking",
+        inverse_name="picking_type_id",
     )
 
     quality_check_per_product_line = fields.Boolean(
@@ -250,6 +261,17 @@ class StockPickingType(models.Model):
         is_qc_installed = self.is_module_installed('quality_control')
         for item in self:
             item.is_quality_control_module_installed = is_qc_installed
+
+    @api.depends('picking_ids.state', 'picking_ids.priority')
+    def _compute_count_picking_urgent(self):
+        StockPicking = self.env['stock.picking']
+        for picking_type in self:
+            picking_domain = [
+                ('picking_type_id', '=', picking_type.id),
+                ('priority', '=', '1'),
+                ('state', '=', 'assigned'),
+            ]
+            picking_type.count_picking_urgent = StockPicking.search_count(picking_domain)
 
     @api.model_create_multi
     def create(self, vals_list):
