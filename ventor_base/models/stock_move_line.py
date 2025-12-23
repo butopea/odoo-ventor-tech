@@ -18,6 +18,6 @@ class StockMoveLine(models.Model):
             'target': 'new',
             'context': {
                 'default_move_line_id': self.id,
-                'default_quantity_total': self.quantity,
+                'default_quantity_total': self.reserved_qty,
             }
         }
