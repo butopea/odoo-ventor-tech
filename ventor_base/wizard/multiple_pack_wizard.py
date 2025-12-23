@@ -128,7 +128,7 @@ class MultiplePackWizard(models.TransientModel):
         # Multiple packages -> base line becomes first pack
         move_line.write({
             'result_package_id': packages[0].id,
-            'quantity': pack_quantities[0],
+            'qty_done': pack_quantities[0],
         })
 
         # Additional packs -> copy lines
@@ -144,5 +144,5 @@ class MultiplePackWizard(models.TransientModel):
     def _create_line_for_package(self, base_move_line, package, qty):
         base_move_line.copy({
             'result_package_id': package.id,
-            'quantity': qty,
+            'qty_done': qty,
         })
