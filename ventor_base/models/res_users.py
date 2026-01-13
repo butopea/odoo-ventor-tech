@@ -187,9 +187,10 @@ class ResUsers(models.Model):
 
         result = super().write(vals)
         if result:
-            self.env.registry.clear_cache()
+            self.env['ir.rule'].clear_caches()
 
             if warehouses_changed:
                 self.with_context(skip_allowed_wh_sync=True)._set_operation_types(previous_wh_ids_by_user)
 
+        self._update_group_picking_wave_menu(vals)
         return result
