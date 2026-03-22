@@ -20,13 +20,17 @@ class StockWarehouse(models.Model):
 
     def update_users_calculated_warehouse(self):
         for warehouse in self:
-            users = self.env['res.users'].with_context(active_test=False).search([
-                ('share', '=', False)])
+            users = self.env['res.users'].search([
+                ('share', '=', False),
+                '|',
+                ('active', '=', True),
+                ('name', 'in', ['OdooBot', 'Default User Template'])
+            ])
             wh_ids = self.env['stock.warehouse'].with_context(active_test=False).search([
                 ('id', '!=', warehouse.id)]).ids
             wh_ids.sort()
             modified_user_ids = []
-            for user in users.with_context(active_test=False):
+            for user in users:
                 # Because of specifics on how Odoo working with companies on first start, we have to filter by company
                 user_wh_ids = user.allowed_warehouse_ids.filtered(
                     lambda wh: wh.company_id.id == warehouse.env.company.id
