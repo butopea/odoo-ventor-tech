@@ -20,11 +20,15 @@ class StockWarehouse(models.Model):
 
     def update_users_calculated_warehouse(self):
         for warehouse in self:
+            odoo_bot = self.env.ref('base.user_root', raise_if_not_found=False)
+            default_user = self.env.ref('base.default_user', raise_if_not_found=False)
+
+            special_ids = [u.id for u in (odoo_bot, default_user) if u]
             users = self.env['res.users'].search([
                 ('share', '=', False),
                 '|',
                 ('active', '=', True),
-                ('name', 'in', ['OdooBot', 'Default User Template'])
+                ('id', 'in', special_ids),
             ])
             wh_ids = self.env['stock.warehouse'].with_context(active_test=False).search([
                 ('id', '!=', warehouse.id)]).ids
