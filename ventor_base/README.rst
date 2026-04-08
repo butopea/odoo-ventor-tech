@@ -8,7 +8,7 @@ Changelog
 
 16.0.2.7.0 (2026-04-08)
 ***********************
-* Optimized Allowed Warehouse assignment on warehouse creation
+* Optimized Allowed Warehouses assignment on warehouse creation
 
 16.0.2.6.0 (2026-03-19)
 ***********************
